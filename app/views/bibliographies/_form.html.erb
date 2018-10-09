@@ -1,0 +1,115 @@
+<%= form_with(model: @bib, local: true) do |form| %>
+
+  <% if @bib.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@bib.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @bib.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :reference_type %><br>
+    <%= form.select :reference_type, ['book', 'book section','journal'] %>
+  </p>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :title_section %><br>
+    <%= form.text_field :title_section %>
+  </p>
+
+  <p>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+  </p>
+
+  <p>
+    <%= form.label :place_published %><br>
+    <%= form.text_field :place_published %>
+  </p>
+
+  <p>
+    <%= form.label :publisher %><br>
+    <%= form.text_field :publisher %>
+  </p>
+
+  <p>
+    <%= form.label :year_published %><br>
+    <%= form.number_field :year_published %>
+  </p>
+
+  <p>
+    <%= form.label :edition %><br>
+    <%= form.text_field :edition %>
+  </p>
+
+  <p>
+    <%= form.label :editor %><br>
+    <%= form.text_field :editor %>
+  </p>
+
+  <p>
+    <%= form.label :pages %><br>
+    <%= form.number_field :pages %>
+  </p>
+
+  <p>
+    <%= form.label :number_of_volumes %><br>
+    <%= form.number_field :number_of_volumes %>
+  </p>
+
+  <p>
+    <%= form.label :isbn %><br>
+    <%= form.text_field :isbn %>
+  </p>
+
+  <p>
+    <%= form.label :title_series %><br>
+    <%= form.text_field :title_series %>
+  </p>
+
+  <p>
+    <%= form.label :editor_series %><br>
+    <%= form.text_field :editor_series %>
+  </p>
+
+  <p>
+    <%= form.label :volume_series %><br>
+    <%= form.text_field :volume_series %>
+  </p>
+
+  <p>
+    <%= form.label :url %><br>
+    <%= form.url_field :url %>
+  </p>
+
+  <p>
+    <%= form.label :doi %><br>
+    <%= form.text_field :doi %>
+  </p>
+
+  <p>
+    <%= form.label :abstract %><br>
+    <%= form.text_field :abstract %>
+  </p>
+
+  <p>
+    <%= form.label :submitter %><br>
+    <%= form.text_field :submitter %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

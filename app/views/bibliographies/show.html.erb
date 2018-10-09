@@ -1,0 +1,62 @@
+<h1>Here is Bibliography #<%= @bib.id %></h1>
+
+<div class="record-view">
+    <label>Reference Type</label>
+    <div class="field-value"><%= @bib.reference_type %></div>
+
+    <label>Title</label>
+    <div class="field-value"><%= @bib.title %></div>
+
+    <label>Title Section</label>
+    <div class="field-value"><%= @bib.title_section %></div>
+
+    <label>Author</label>
+    <div class="field-value"><%= @bib.author %></div>
+
+    <label>Place Published</label>
+    <div class="field-value"><%= @bib.place_published %></div>
+
+    <label>Publisher</label>
+    <div class="field-value"><%= @bib.publisher %></div>
+
+    <label>Year Published</label>
+    <div class="field-value"><%= @bib.year_published %></div>
+
+    <label>Edition</label>
+    <div class="field-value"><%= @bib.edition %></div>
+
+    <label>Editor</label>
+    <div class="field-value"><%= @bib.editor %></div>
+
+    <label>Pages</label>
+    <div class="field-value"><%= @bib.pages %></div>
+
+    <label>Number of Volumes</label>
+    <div class="field-value"><%= @bib.number_of_volumes %></div>
+
+    <label>ISBN</label>
+    <div class="field-value"><%= @bib.isbn %></div>
+
+    <label>Series Title</label>
+    <div class="field-value"><%= @bib.title_series %></div>
+
+    <label>Series Editor</label>
+    <div class="field-value"><%= @bib.editor_series %></div>
+
+    <label>Series Volume</label>
+    <div class="field-value"><%= @bib.volume_series %></div>
+
+    <label>URL</label>
+    <div class="field-value"><%= @bib.url %></div>
+
+    <label>DOI</label>
+    <div class="field-value"><%= @bib.doi %></div>
+
+    <label>Abstract</label>
+    <div class="field-value"><%= @bib.abstract %></div>
+
+    <label>Submitter</label>
+    <div class="field-value"><%= @bib.submitter %></div>
+</div>
+
+<%= link_to 'Edit', edit_bibliography_path(@bib) %> | <%= link_to 'Back', bibliographies_path %>
